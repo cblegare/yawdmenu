@@ -4,6 +4,7 @@
 
 """Package main definition."""
 
+
 from __future__ import absolute_import
 
 from pkg_resources import get_distribution, DistributionNotFound
@@ -26,7 +27,6 @@ except DistributionNotFound:
     __version__ = '(local)'
 else:
     pass
-    # make shortcut import here
 
 
 class DmenuError(Exception):

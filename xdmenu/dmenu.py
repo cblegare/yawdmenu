@@ -9,6 +9,7 @@ import six
 
 from xdmenu import DmenuError, DmenuUsageError
 
+
 class Dmenu(object):
     def __init__(self, proc_runner=None, **kwargs):
         """
