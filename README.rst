@@ -19,8 +19,8 @@ Extensible wrapper for dmenu_.
     `dmenu is a dynamic menu for X, originally designed for dwm. It manages
     large numbers of user-defined menu items efficiently.`
 
-`xdmenu` is free software and licensed under the GNU General Public License v3.
-See :ref:`license` for details.
+`xdmenu` is free software and licensed under the GNU Lesser General Public
+License v3. See :ref:`license` for details.
 
 
 Features
@@ -28,6 +28,7 @@ Features
 
 * Many options available in patches built in
 * Additional options can be added
+* Easy to extend for other tools such as `Rofi`_
 
 
 Credits
@@ -39,3 +40,4 @@ project template.
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`cblegare/pythontemplate`: https://github.com/cblegare/pythontemplate
 .. _dmenu: http://tools.suckless.org/dmenu/
+.. _Rofi: https://davedavenport.github.io/rofi/

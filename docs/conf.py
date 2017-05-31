@@ -73,6 +73,11 @@ suppress_warnings = [
 ]
 
 
+# Mappings to external docs
+intersphinx_mapping = {'python': ('https://docs.python.org/3.4',
+                                  None)}
+
+
 # We enable the nitpicky mode that will warn about all references where the
 # target cannot be found.
 # Some python built-ins can not be found (including 'type' and 'object').
@@ -105,6 +110,7 @@ nitpick_ignore = [
     ('py:obj', 'str'),
     ('py:obj', 'int'),
     ('py:obj', 'bool'),
+    ('py:obj', 'float'),
     ('py:obj', ''),
     # Specific warnings
     ('py:class', 'classmethod'),
@@ -114,6 +120,7 @@ nitpick_ignore = [
     ('py:func', 'setuptools.setup'),
     ('py:class', 'subprocess.Popen'),
     ('py:class', 'exceptions.Exception'),
+    ('py:class', 'Exception'),
 
 ]
 

@@ -1,7 +1,7 @@
 .. _setup:
 
 
-setup module
+Setup Script
 ============
 
 

@@ -39,7 +39,6 @@ Development resources
    modules
 
 
-
 Indices and tables
 ==================
 

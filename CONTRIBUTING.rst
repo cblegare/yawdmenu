@@ -109,5 +109,3 @@ Before you submit a pull request, check that it meets these guidelines:
 3. The pull request should work for Python 2.7 and up. Check
    https://travis-ci.org/cblegare/xdmenu/pull_requests
    and make sure that the tests pass for all supported Python versions.
-
-Thanks :)

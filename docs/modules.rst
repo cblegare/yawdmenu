@@ -1,8 +1,7 @@
-xdmenu
-======
+API documentation
+=================
 
 .. toctree::
    :maxdepth: 4
 
-   tests
    xdmenu

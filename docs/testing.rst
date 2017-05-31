@@ -67,3 +67,12 @@ that this specific bug will not occur again. The full name is *non-regression
 test*. It can also be a test made prior to changing an application to make
 sure the application provides the same outcome. Put these in the
 :mod:`tests.regression` package.
+
+
+All Automated tests
+===================
+
+.. toctree::
+   :maxdepth: 4
+
+   tests

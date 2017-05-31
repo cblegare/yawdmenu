@@ -15,21 +15,21 @@ behavior of `dmenu`.
 .. autoclass:: xdmenu.Dmenu
     :noindex:
 
-Run `dmenu` using :meth:`xdmenu.Dmenu.run`.
+Run `dmenu` using :meth:`xdmenu.BaseMenu.run` which all child class should have.
 
-.. automethod:: xdmenu.Dmenu.run
+.. automethod:: xdmenu.BaseMenu.run
     :noindex:
 
 If you only want to get the command line arguments, simply use
-:meth:`xdmenu.Dmenu.make_cmd`
+:meth:`xdmenu.BaseMenu.make_cmd`
 
-.. automethod:: xdmenu.Dmenu.make_cmd
+.. automethod:: xdmenu.BaseMenu.make_cmd
     :noindex:
 
 Since `xdmenu` is intended to be extensible, you can add supported options
-using :meth:`xdmenu.Dmenu.add_arg`
+using :meth:`xdmenu.BaseMenu.add_arg`
 
-.. automethod:: xdmenu.Dmenu.add_arg
+.. automethod:: xdmenu.BaseMenu.add_arg
     :noindex:
 
 

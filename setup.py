@@ -20,7 +20,6 @@ try:
 except ImportError:
     # python 2
     from urlparse import urlparse
-import six
 
 
 __all__ = (
@@ -285,9 +284,25 @@ class ProjectMetadata(object):
         Returns:
              List[str]: A list of short strings
         """
-        return ['sphinx>=1.5',
-                'sphinx-autodoc-typehints',
-                'sphinx_rtd_theme']
+        return []
+
+    @property
+    def extras_require(self):
+        """
+        A dictionary mapping names of `extras` (optional features of your
+        project) to strings or lists of strings specifying what other
+        distributions must be installed to support those features.
+
+        See Also:
+            http://setuptools.readthedocs.io/en/latest/setuptools.html#declaring-extras-optional-features-with-their-own-dependencies
+
+        Returns:
+            Dict: Lists of dependencies indexed by the feature they enable.
+        """
+        develop = ['sphinx>=1.5',
+                   'sphinx_rtd_theme']
+        return {'develop': develop,
+                'all': develop}
 
     def setup(self):
         """Run :func:`setuptools.setup` using :func:~`raw`."""
@@ -325,7 +340,8 @@ class ProjectMetadata(object):
                               'mk_req': Requirements},
                     install_requires=self.install_requires,
                     tests_require=self.tests_require,
-                    setup_requires=self.setup_requires)
+                    setup_requires=self.setup_requires,
+                    extras_require = self.extras_require)
 
     def __str__(self):
         """Provide a human-readable representation."""
@@ -334,25 +350,25 @@ class ProjectMetadata(object):
 
     @staticmethod
     def _ensure_short_string(string):
-        string = six.u(string)
+        string = str(string)
         assert len(string) <= 200
         return string
 
     @staticmethod
     def _ensure_long_string(string):
-        string = six.u(string)
+        string = str(string)
         return string
 
     @staticmethod
     def _ensure_email_address(string):
-        string = six.u(string)
+        string = str(string)
         _, email_str = email.utils.parseaddr(str(string))
         assert email_str == str(string)
         return string
 
     @staticmethod
     def _ensure_url(string, qualifying=None):
-        string = six.u(string)
+        string = str(string)
         min_attributes = ('scheme', 'netloc')
 
         qualifying = min_attributes if qualifying is None else qualifying
@@ -414,10 +430,14 @@ class Requirements(setuptools.Command):
         dependencies.extend(metadata.install_requires)
         dependencies.extend(metadata.tests_require)
 
+        for key in metadata.extras_require:
+            dependencies.extend(metadata.extras_require[key])
+
         requirements_filepath = os.path.join(PROJECT_ROOT, 'requirements.txt')
 
         with open(requirements_filepath, 'w') as opened:
             opened.write('\n'.join(set(dependencies)))
+
 
 class Documentation(setuptools.Command):
     """
@@ -433,15 +453,17 @@ class Documentation(setuptools.Command):
 
     description = 'create documentation distribution'
     user_options = [
-        ('builder=', None, 'documentation output format'
-                           ' [default: html]'),
-        ('dist-dir=', None, 'directory to put final built distributions in'
-                            ' [default: dist/docs]'),
+        ('builder=', None, 'documentation output format '
+                           '[default: html]'),
+        ('dist-dir=', None, 'directory to put final built distributions in '
+                            '[default: dist/docs]'),
         ('build-dir=', None, 'temporary directory for creating the '
-                             'distribution'
-                             ' [default: build/docs]'),
-        ('src-dir=', None, 'documentation source directory'
-                           ' [default: docs]'),
+                             'distribution '
+                             '[default: build/docs]'),
+        ('src-dir=', None, 'documentation source directory '
+                           '[default: docs]'),
+        ('ignore-warnings', None, 'let the documentation be built even if '
+                                  'there are warnings [default: False]')
     ]
 
     targets = {
@@ -469,9 +491,11 @@ class Documentation(setuptools.Command):
         self.dist_dir = os.path.join(PROJECT_ROOT, 'dist', 'docs')
         self.build_dir = os.path.join(PROJECT_ROOT, 'build', 'docs')
         self.src_dir = os.path.join(PROJECT_ROOT, 'docs')
+        self.ignore_warnings = False
 
     def finalize_options(self):
         """Post-process options."""
+        self.ignore_warnings = bool(self.ignore_warnings)
         if self.builder in self.targets:
             self._actual_targets = [self.builder]
         elif self.builder == 'all':
@@ -548,7 +572,6 @@ class Documentation(setuptools.Command):
         return build_dir
 
     def _build_doc(self, target):
-        from datetime import datetime
         import shutil
         import sphinx
 
@@ -566,13 +589,16 @@ class Documentation(setuptools.Command):
             '-d', cached_directory,  # path for the cached doctree files
             '-n',                    # warn about all missing references
             '-q',                    # no output on stdout, warnings on stderr
-            '-W',                    # turn warnings into errors
             '-T',                    # show full traceback on exception
             '-D', 'project={!s}'.format(metadata.name),
-            '-D', 'version={!s}'.format(metadata.version),
-            rst_src,
-            build_dir
+            '-D', 'version={!s}'.format(metadata.version)
         ]
+
+        if not self.ignore_warnings:
+            all_sphinx_opts.append('-W')
+
+        all_sphinx_opts.append(rst_src)
+        all_sphinx_opts.append(build_dir)
 
         sphinx.build_main([str(arg) for arg in all_sphinx_opts])
         shutil.rmtree(str(dist_dir), ignore_errors=True)
