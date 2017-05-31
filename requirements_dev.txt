@@ -3,7 +3,7 @@ flake8-quotes>=0.3
 xenon
 sphinx_rtd_theme
 sphinx>=1.5
-pytest-cov
+pytest-cov==2.5.1
 pytest
 coverage
 pycodestyle>=2.2
