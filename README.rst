@@ -17,6 +17,10 @@
      :target: https://pyup.io/repos/github/cblegare/xdmenu/
      :alt: Python 3
 
+.. image:: https://img.shields.io/coverity/scan/12831.svg
+     :target: https://scan.coverity.com/projects/cblegare-xdmenu
+     :alt: Coverity Scan Build Status
+
 Extensible wrapper for dmenu_.
 
     `dmenu is a dynamic menu for X, originally designed for dwm. It manages
