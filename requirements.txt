@@ -1,6 +1,6 @@
 flake8==3.3.0
 flake8-quotes>=0.3
-xenon
+xenon==0.5.0
 sphinx_rtd_theme
 sphinx>=1.5
 pytest-cov
