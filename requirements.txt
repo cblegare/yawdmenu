@@ -5,7 +5,7 @@ sphinx-rtd-theme==0.2.4
 sphinx>=1.5
 pytest-cov==2.5.1
 click==6.7
-pytest
+pytest==3.1.0
 coverage
 pycodestyle>=2.2
 pytest-flake8
