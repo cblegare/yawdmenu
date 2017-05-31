@@ -304,8 +304,8 @@ class Dmenu2(Dmenu):
 
             filter (bool): activates filter mode. All matching items currently
                 shown in the list will be selected, starting with the item that
-                is highlighted and wrapping around to the beginning of the list.
-                Equivalent for the ``-r`` command line option of dmenu2.
+                is highlighted and wrapping around to the beginning of the
+                list. Equivalent for the ``-r`` command line option of dmenu2.
 
             fuzzy (bool): dmenu uses fuzzy matching. It matches items that have
                 all characters entered, in sequence they are entered, but there
