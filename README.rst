@@ -13,14 +13,23 @@
      :target: https://pyup.io/repos/github/cblegare/xdmenu/
      :alt: Updates
 
+.. image:: https://pyup.io/repos/github/cblegare/xdmenu/python-3-shield.svg
+     :target: https://pyup.io/repos/github/cblegare/xdmenu/
+     :alt: Python 3
 
 Extensible wrapper for dmenu_.
 
     `dmenu is a dynamic menu for X, originally designed for dwm. It manages
     large numbers of user-defined menu items efficiently.`
 
+* `Source code on GitHub`_
+* `Latest documentation`_
+
 `xdmenu` is free software and licensed under the GNU Lesser General Public
 License v3. See :ref:`license` for details.
+
+.. _Source code on GitHub: https://github.com/cblegare/xdmenu
+.. _Latest documentation: https://xdmenu.readthedocs.io/en/latest
 
 
 Features
