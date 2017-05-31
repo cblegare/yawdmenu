@@ -1,25 +1,25 @@
 
 .. image:: https://img.shields.io/pypi/v/xdmenu.svg
-        :target: https://pypi.python.org/pypi/xdmenu
+    :target: https://pypi.python.org/pypi/xdmenu
 
 .. image:: https://img.shields.io/travis/cblegare/xdmenu.svg
-        :target: https://travis-ci.org/cblegare/xdmenu
+    :target: https://travis-ci.org/cblegare/xdmenu
 
 .. image:: https://readthedocs.org/projects/xdmenu/badge/?version=latest
-        :target: https://xdmenu.readthedocs.io/en/latest/?badge=latest
-        :alt: Documentation Status
+    :target: https://xdmenu.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
 
 .. image:: https://pyup.io/repos/github/cblegare/xdmenu/shield.svg
-     :target: https://pyup.io/repos/github/cblegare/xdmenu/
-     :alt: Updates
+    :target: https://pyup.io/repos/github/cblegare/xdmenu/
+    :alt: Updates
 
 .. image:: https://pyup.io/repos/github/cblegare/xdmenu/python-3-shield.svg
-     :target: https://pyup.io/repos/github/cblegare/xdmenu/
-     :alt: Python 3
+    :target: https://pyup.io/repos/github/cblegare/xdmenu/
+    :alt: Python 3
 
-.. image:: https://img.shields.io/coverity/scan/12831.svg
-     :target: https://scan.coverity.com/projects/cblegare-xdmenu
-     :alt: Coverity Scan Build Status
+.. image:: https://codecov.io/gh/cblegare/xdmenu/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/cblegare/xdmenu
+    :alt: Coverage Report
 
 Extensible wrapper for dmenu_.
 
