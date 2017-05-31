@@ -8,4 +8,4 @@ click==6.7
 pytest==3.1.0
 coverage==4.4.1
 pycodestyle>=2.2
-pytest-flake8
+pytest-flake8==0.8.1
