@@ -163,7 +163,7 @@ class ProjectMetadata(object):
         provided for `basic usage
         <http://setuptools.readthedocs.io/en/latest/setuptools.html?highlight=keywords#basic-use>`
         """
-        return ''
+        return 'dmenu, rofi, X, X11, UNIX, menu, window manager, Python, Qtile'
 
     @property
     def author(self):

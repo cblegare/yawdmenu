@@ -4,6 +4,34 @@
 Installation
 ============
 
+`xdmenu` uses and needs an implementation of `dmenu`.  This means a command
+line program that reads lines from *stdin*, presents these lines to the user as
+a menu and prints the chosen lines to *stdout*.
+
+dmenu_
+    *dmenu is a dynamic menu for X, originally designed for dwm. It manages
+    large numbers of user-defined menu items efficiently.*
+
+dmenu2_
+    *dmenu2 is the fork of original dmenu - an efficient dynamic menu for X,
+    patched with XFT, quiet, x & y, token, fuzzy matching, follow focus, tab
+    nav, filter.*
+
+    *Added option to set screen on which dmenu apperars, as long as opacity,
+    window class and window name. Also allows to dim screen with selected color
+    and opacity while dmenu2 is running.*
+
+    *Added underline color and height. (options -uc and -uh)*
+
+Rofi_
+    *Rofi, like dmenu, will provide the user with a textual list of options
+    where one or more can be selected. This can either be, running an
+    application, selecting a window or options provided by an external script.*
+
+.. _dmenu: http://tools.suckless.org/dmenu/
+.. _dmenu2: https://bitbucket.org/melek/dmenu2
+.. _Rofi: https://davedavenport.github.io/rofi/
+
 
 Stable release
 --------------

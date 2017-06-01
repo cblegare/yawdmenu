@@ -2,6 +2,13 @@
 Usage
 =====
 
+`xdmenu` is a wrapper API for `dmenu`_.  The original use case of `xdmenu` was
+to ease the integration of `dmenu` with `Qtile`_, a window manager written in
+Python.
+
+.. _dmenu: http://tools.suckless.org/dmenu/
+.. _Qtile: http://www.qtile.org
+
 The simplest possible usage of this wrapper is through the :func:`xdmenu.dmenu`
 function.
 
@@ -32,4 +39,7 @@ using :meth:`xdmenu.BaseMenu.add_arg`
 .. automethod:: xdmenu.BaseMenu.add_arg
     :noindex:
 
+`xdmenu` also provides a wrapper for `dmenu2`_.  See :class:`xdmenu.Dmenu2`.
+
+.. _dmenu2: https://bitbucket.org/melek/dmenu2
 
