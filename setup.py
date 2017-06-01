@@ -34,7 +34,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 PYTHON_VERSION = platform.python_version_tuple()
 
-DEFAULT_VERSION = '1.0'
+DEFAULT_VERSION = '1.0.0b2'
 
 
 class ProjectMetadata(object):
@@ -77,8 +77,18 @@ class ProjectMetadata(object):
         Returns:
              str: A short string
         """
-        value = 'Yet an other wrapper for dmenu'
+        value = 'Extensible wrapper for dmenu.'
         return self._ensure_short_string(value)
+
+
+    @property
+    def long_description(self):
+        """
+        Returns:
+             str: A string
+        """
+        value = 'Extensible wrapper for dmenu.'
+        return open('README.rst').read()
 
     @property
     def version(self):
@@ -140,7 +150,7 @@ class ProjectMetadata(object):
         Returns:
              str: A short string
         """
-        value = 'GNU General Public License v3'
+        value = 'GNU Lesser General Public License v3'
         return self._ensure_short_string(value)
 
     @property
@@ -195,7 +205,20 @@ class ProjectMetadata(object):
         Returns:
              List[str]: A list of short strings
         """
-        value = []
+        value = ['Development Status :: 4 - Beta',
+                 'Environment :: Console',
+                 'Environment :: X11 Applications',
+                 'Intended Audience :: Developers',
+                 'License :: OSI Approved :: '
+                 'GNU Lesser General Public License v3 or later (LGPLv3+)',
+                 'Operating System :: OS Independent',
+                 'Programming Language :: Python :: 2.7',
+                 'Programming Language :: Python :: 3.3',
+                 'Programming Language :: Python :: 3.4',
+                 'Programming Language :: Python :: 3.5',
+                 'Programming Language :: Python :: 3.6',
+                 'Topic :: Desktop Environment',
+                 'Topic :: Utilities']
         return [self._ensure_short_string(string) for string in value]
 
     @property
@@ -237,7 +260,7 @@ class ProjectMetadata(object):
         Returns:
              List[str]: A list of short strings
         """
-        return ['click']
+        return []
 
     @property
     def tests_require(self):
@@ -322,6 +345,7 @@ class ProjectMetadata(object):
         return dict(name=self.name,
                     version=self.version,
                     description=self.description,
+                    long_description=self.long_description,
                     url=self.url,
                     license=self.license,
                     author=self.author,

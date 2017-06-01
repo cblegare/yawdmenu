@@ -1,23 +1,29 @@
 
-.. image:: https://img.shields.io/pypi/v/xdmenu.svg
-    :target: https://pypi.python.org/pypi/xdmenu
 
-.. image:: https://img.shields.io/travis/cblegare/xdmenu.svg
-    :target: https://travis-ci.org/cblegare/xdmenu
+|build_badge| |pypi_badge| |rtfd_badge| |cov_badge| |lic_badge|
 
-.. image:: https://readthedocs.org/projects/xdmenu/badge/?version=latest
+
+.. |rtfd_badge| image:: https://readthedocs.org/projects/xdmenu/badge/?version=latest
     :target: https://xdmenu.readthedocs.io/en/latest/?badge=latest
+    :alt: Latest Documentation
+
+.. |lic_badge| image:: https://img.shields.io/badge/License-LGPL%20v3-blue.svg
+    :target: http://www.gnu.org/licenses/lgpl-3.0
+    :alt: GNU Lesser General Public License v3
+
+.. |build_badge| image:: https://img.shields.io/travis/cblegare/xdmenu.svg
+    :target: https://travis-ci.org/cblegare/xdmenu
     :alt: Documentation Status
 
-.. image:: https://pyup.io/repos/github/cblegare/xdmenu/shield.svg
-    :target: https://pyup.io/repos/github/cblegare/xdmenu/
-    :alt: Updates
+.. |pypi_badge| image:: https://img.shields.io/pypi/v/xdmenu.svg
+    :target: https://pypi.python.org/pypi/xdmenu`
+    :alt: Released on PyPI
 
-.. image:: https://pyup.io/repos/github/cblegare/xdmenu/python-3-shield.svg
+.. |py3_badge| image:: https://pyup.io/repos/github/cblegare/xdmenu/python-3-shield.svg
     :target: https://pyup.io/repos/github/cblegare/xdmenu/
-    :alt: Python 3
+    :alt: Python 3 ready
 
-.. image:: https://codecov.io/gh/cblegare/xdmenu/branch/master/graph/badge.svg
+.. |cov_badge| image:: https://codecov.io/gh/cblegare/xdmenu/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/cblegare/xdmenu
     :alt: Coverage Report
 
@@ -30,7 +36,7 @@ Extensible wrapper for dmenu_.
 * `Latest documentation`_
 
 `xdmenu` is free software and licensed under the GNU Lesser General Public
-License v3. See :ref:`license` for details.
+License v3.
 
 .. _Source code on GitHub: https://github.com/cblegare/xdmenu
 .. _Latest documentation: https://xdmenu.readthedocs.io/en/latest
