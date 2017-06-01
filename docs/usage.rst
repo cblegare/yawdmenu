@@ -10,7 +10,14 @@ Python.
 .. _Qtile: http://www.qtile.org
 
 The simplest possible usage of this wrapper is through the :func:`xdmenu.dmenu`
-function.
+function.  Here is an example usage::
+
+    >>> from xdmenu import dmenu
+    >>> dmenu(['foo', 'bar'])  # shows a menu window with choices on one line
+    ['bar']                    # the user picked 'bar'
+    >>> dmenu(['foo', 'bar'], lines=2)  # shows a menu window with two lines
+    ['foo']                             # the user picked 'foo'
+
 
 .. autofunction:: xdmenu.dmenu
     :noindex:

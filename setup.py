@@ -34,7 +34,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 PYTHON_VERSION = platform.python_version_tuple()
 
-DEFAULT_VERSION = '1.0.0b2'
+DEFAULT_VERSION = '1.0.0'
 
 
 class ProjectMetadata(object):
