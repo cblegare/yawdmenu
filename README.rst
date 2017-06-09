@@ -13,7 +13,7 @@
 
 .. |build_badge| image:: https://img.shields.io/travis/cblegare/xdmenu.svg
     :target: https://travis-ci.org/cblegare/xdmenu
-    :alt: Documentation Status
+    :alt: Build Status
 
 .. |pypi_badge| image:: https://img.shields.io/pypi/v/xdmenu.svg
     :target: https://pypi.python.org/pypi/xdmenu`

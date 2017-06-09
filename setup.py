@@ -34,7 +34,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 PYTHON_VERSION = platform.python_version_tuple()
 
-DEFAULT_VERSION = '1.0.0'
+DEFAULT_VERSION = '1.0.1'
 
 
 class ProjectMetadata(object):
@@ -87,7 +87,6 @@ class ProjectMetadata(object):
         Returns:
              str: A string
         """
-        value = 'Extensible wrapper for dmenu.'
         return open('README.rst').read()
 
     @property

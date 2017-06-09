@@ -271,7 +271,7 @@ class Dmenu(BaseMenu):
             windowid (str): embed into windowid.
 
         """
-        super(self.__class__, self).__init__(proc_runner=proc_runner, **kwargs)
+        super(Dmenu, self).__init__(proc_runner=proc_runner, **kwargs)
         self.add_arg('bottom', _bottom)
         self.add_arg('grab', _grab)
         self.add_arg('insensitive', _insensitive)
@@ -358,7 +358,7 @@ class Dmenu2(Dmenu):
             width (int): defines the desired menu window width. Equivalent for
                 the ``-w`` command line option of dmenu2.
         """
-        super(self.__class__, self).__init__(proc_runner=proc_runner, **kwargs)
+        super(Dmenu2, self).__init__(proc_runner=proc_runner, **kwargs)
         self.add_arg('filter', _filter)
         self.add_arg('fuzzy', _fuzzy)
         self.add_arg('token', _token)
